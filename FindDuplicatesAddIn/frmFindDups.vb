@@ -1,7 +1,11 @@
 ﻿'find duplicate records in ArcMap tables
 'Can be shapefile or geodatabase
 'modified from VBA code downloaded from ESRI forum
+'converted to V.Net ESRI Add-in for ArcMap 10+
 'original writer unknown
+'Conversion: Grant Herbert 2010
+'Hosted on GitHub 2013
+'TODO: error trapping
 Imports ESRI.ArcGIS.ArcMapUI
 Imports ESRI.ArcGIS.Carto
 Imports ESRI.ArcGIS.Geodatabase
@@ -117,7 +121,9 @@ Public Class frmFindDups
         Dim i As Long, n As Long, iField As Long
 
         FieldString = ""
+        FName = ""
         n = 0
+
         If lbFields.SelectedItem <> "" Then 'check if a field selected
             Debug.Print(lbFields.SelectedItem.ToString)
             n = lbFields.SelectedIndex 'get index number in list
@@ -171,6 +177,8 @@ Public Class frmFindDups
         Dim pTD As ITableDefinition
         Dim WhereClause As String
         Dim pQF As IQueryFilter
+
+        WhereClause = ""
 
         bUseQF = False
         If (Not bUseSel) Then
