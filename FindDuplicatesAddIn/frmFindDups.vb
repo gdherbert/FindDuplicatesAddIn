@@ -5,7 +5,8 @@
 'original writer unknown
 'Conversion: Grant Herbert 2010
 'Hosted on GitHub 2013
-'TODO: error trapping
+'updated 2013 using version 10.1 SDK, recompile with older SDK if required for version 10
+
 Imports ESRI.ArcGIS.ArcMapUI
 Imports ESRI.ArcGIS.Carto
 Imports ESRI.ArcGIS.Geodatabase
@@ -58,6 +59,9 @@ Public Class frmFindDups
             TabType = TableType.IStandaloneTable
         ElseIf TypeOf pSelItem Is IFeatureLayer Then
             TabType = TableType.IFeatureLayer
+        Else
+            MsgBox("Unable to work with this object", vbExclamation)
+            Exit Sub
         End If
         pTable = pSelItem
 
@@ -117,7 +121,7 @@ Public Class frmFindDups
 
         ' Get selected field(s)
 
-        Dim FList() As String, FieldString As String, FName As String
+        Dim FList() As String = Nothing, FieldString As String, FName As String
         Dim i As Long, n As Long, iField As Long
 
         FieldString = ""
@@ -153,8 +157,8 @@ Public Class frmFindDups
         ' Check for selection set
 
         Dim bUseSel As Boolean
-        Dim pTSel As ITableSelection
-        Dim pFSel As IFeatureSelection
+        Dim pTSel As ITableSelection = Nothing
+        Dim pFSel As IFeatureSelection = Nothing
         Dim pSS As ISelectionSet
 
         bUseSel = False
@@ -176,7 +180,7 @@ Public Class frmFindDups
         Dim bUseQF As Boolean
         Dim pTD As ITableDefinition
         Dim WhereClause As String
-        Dim pQF As IQueryFilter
+        Dim pQF As IQueryFilter = Nothing
 
         WhereClause = ""
 
@@ -198,7 +202,7 @@ Public Class frmFindDups
         Dim pViewExtent As IEnvelope
         Dim pPC As IPointCollection
         Dim pPoly As IPolygon
-        Dim pSF As ISpatialFilter
+        Dim pSF As ISpatialFilter = Nothing
 
         bUseSF = False
         If cbVisExtent.Checked Then
@@ -348,14 +352,14 @@ Public Class frmFindDups
                "3. The 'Select All' option selects ALL matching records instead of just the duplicates." & Environment.NewLine & _
                "4. The 'Restrict to Visible Extent' option restricts feature class results to the active view." & Environment.NewLine & _
                "5. The 'Reset' button clears selection & the field list." & Environment.NewLine & _
-               "-> a RESET is recommended between tables.", MsgBoxStyle.OkOnly, "Find Duplicates Help")
+               "-> a RESET is recommended between tables." & Environment.NewLine & _
+               "Version for ESRI 10.1, 2013", MsgBoxStyle.OkOnly, "Find Duplicates Help")
     End Sub
 
     Private Sub btnRestart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRestart.Click
         'Restart - clear the selection in the table and clear the field list
         lbFields.Items.Clear()
         m_pMap.ClearSelection() 'clears all selections in the map
-        'clear selections just in the layer?
         ToolStripStatusLabel1.Text = "Ready"
         Application.DoEvents()
     End Sub
@@ -363,4 +367,5 @@ Public Class frmFindDups
     Private Sub frmFindDups_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
+
 End Class

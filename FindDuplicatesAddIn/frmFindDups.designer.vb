@@ -22,24 +22,24 @@ Partial Class frmFindDups
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnGetFields = New System.Windows.Forms.Button
-        Me.btnFindDups = New System.Windows.Forms.Button
-        Me.cbVisExtent = New System.Windows.Forms.CheckBox
-        Me.cbCaseSensitive = New System.Windows.Forms.CheckBox
-        Me.cbSelectAll = New System.Windows.Forms.CheckBox
-        Me.lbFields = New System.Windows.Forms.ListBox
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel
-        Me.btnHelp = New System.Windows.Forms.Button
-        Me.btnRestart = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.btnGetFields = New System.Windows.Forms.Button()
+        Me.btnFindDups = New System.Windows.Forms.Button()
+        Me.cbVisExtent = New System.Windows.Forms.CheckBox()
+        Me.cbCaseSensitive = New System.Windows.Forms.CheckBox()
+        Me.cbSelectAll = New System.Windows.Forms.CheckBox()
+        Me.lbFields = New System.Windows.Forms.ListBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.btnHelp = New System.Windows.Forms.Button()
+        Me.btnRestart = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnGetFields
         '
-        Me.btnGetFields.Location = New System.Drawing.Point(12, 289)
-        Me.btnGetFields.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGetFields.Location = New System.Drawing.Point(13, 290)
+        Me.btnGetFields.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGetFields.Name = "btnGetFields"
         Me.btnGetFields.Size = New System.Drawing.Size(109, 28)
         Me.btnGetFields.TabIndex = 0
@@ -48,8 +48,8 @@ Partial Class frmFindDups
         '
         'btnFindDups
         '
-        Me.btnFindDups.Location = New System.Drawing.Point(135, 289)
-        Me.btnFindDups.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnFindDups.Location = New System.Drawing.Point(130, 290)
+        Me.btnFindDups.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFindDups.Name = "btnFindDups"
         Me.btnFindDups.Size = New System.Drawing.Size(124, 28)
         Me.btnFindDups.TabIndex = 1
@@ -60,7 +60,7 @@ Partial Class frmFindDups
         '
         Me.cbVisExtent.AutoSize = True
         Me.cbVisExtent.Location = New System.Drawing.Point(17, 261)
-        Me.cbVisExtent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbVisExtent.Margin = New System.Windows.Forms.Padding(4)
         Me.cbVisExtent.Name = "cbVisExtent"
         Me.cbVisExtent.Size = New System.Drawing.Size(182, 21)
         Me.cbVisExtent.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class frmFindDups
         Me.cbCaseSensitive.Checked = True
         Me.cbCaseSensitive.CheckState = System.Windows.Forms.CheckState.Checked
         Me.cbCaseSensitive.Location = New System.Drawing.Point(17, 233)
-        Me.cbCaseSensitive.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbCaseSensitive.Margin = New System.Windows.Forms.Padding(4)
         Me.cbCaseSensitive.Name = "cbCaseSensitive"
         Me.cbCaseSensitive.Size = New System.Drawing.Size(123, 21)
         Me.cbCaseSensitive.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class frmFindDups
         '
         Me.cbSelectAll.AutoSize = True
         Me.cbSelectAll.Location = New System.Drawing.Point(153, 233)
-        Me.cbSelectAll.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbSelectAll.Margin = New System.Windows.Forms.Padding(4)
         Me.cbSelectAll.Name = "cbSelectAll"
         Me.cbSelectAll.Size = New System.Drawing.Size(88, 21)
         Me.cbSelectAll.TabIndex = 4
@@ -96,7 +96,7 @@ Partial Class frmFindDups
         Me.lbFields.FormattingEnabled = True
         Me.lbFields.ItemHeight = 16
         Me.lbFields.Location = New System.Drawing.Point(15, 2)
-        Me.lbFields.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lbFields.Margin = New System.Windows.Forms.Padding(4)
         Me.lbFields.Name = "lbFields"
         Me.lbFields.Size = New System.Drawing.Size(340, 212)
         Me.lbFields.TabIndex = 5
@@ -105,12 +105,13 @@ Partial Class frmFindDups
         '
         Me.StatusStrip1.AutoSize = False
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 332)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 334)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
         Me.StatusStrip1.Size = New System.Drawing.Size(372, 27)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "Version"
         '
         'ToolStripStatusLabel1
         '
@@ -121,7 +122,7 @@ Partial Class frmFindDups
         'btnHelp
         '
         Me.btnHelp.Location = New System.Drawing.Point(272, 225)
-        Me.btnHelp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnHelp.Margin = New System.Windows.Forms.Padding(4)
         Me.btnHelp.Name = "btnHelp"
         Me.btnHelp.Size = New System.Drawing.Size(84, 28)
         Me.btnHelp.TabIndex = 7
@@ -131,7 +132,7 @@ Partial Class frmFindDups
         'btnRestart
         '
         Me.btnRestart.Location = New System.Drawing.Point(272, 289)
-        Me.btnRestart.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRestart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRestart.Name = "btnRestart"
         Me.btnRestart.Size = New System.Drawing.Size(84, 28)
         Me.btnRestart.TabIndex = 8
@@ -152,7 +153,7 @@ Partial Class frmFindDups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(372, 359)
+        Me.ClientSize = New System.Drawing.Size(372, 361)
         Me.Controls.Add(Me.btnRestart)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnHelp)
@@ -164,7 +165,7 @@ Partial Class frmFindDups
         Me.Controls.Add(Me.btnFindDups)
         Me.Controls.Add(Me.btnGetFields)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmFindDups"

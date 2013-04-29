@@ -109,6 +109,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>ArcGISAddInHostGenerator</Generator>
       <LastGenOutput>Config.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </AddInContent>
   </ItemGroup>
   <ItemGroup>

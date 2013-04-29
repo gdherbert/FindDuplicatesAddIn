@@ -2,18 +2,18 @@
   <Name>FindDuplicates</Name>
   <AddInID>{ac791f2b-4f09-4dba-8bfe-197c764f8ef6}</AddInID>
   <Description>Find duplicates in the feature class selected in the Table of Contents.</Description>
-  <Version>1.0</Version>
+  <Version>1.1</Version>
   <Image>Images\FindDuplicatesAddIn.png</Image>
   <Author>granth</Author>
   <Company>QLDC</Company>
   <Date>8/04/2011</Date>
   <Targets>
-    <Target name="Desktop" version="10.0" />
+    <Target name="Desktop" version="10.1" />
   </Targets>
   <AddIn language="CLR" library="FindDuplicatesAddIn.dll" namespace="FindDuplicatesAddIn">
     <ArcMap>
       <Commands>
-        <Button id="QLDC_FindDuplicatesAddIn_FindDup_Button" class="FindDup_Button" message="" caption="Find Duplicates" tip="Find Duplicate records in selected feature class" category="Add-In Controls" image="Images\FindDup_Button.png" onDemand="false" />
+        <Button id="FindDuplicatesAddIn_FindDup_Button101" class="FindDup_Button" message="Find Duplicates Tool" caption="Find Duplicates" tip="Find Duplicate records in selected feature class" category="Add-In Controls" image="Images\FindDup_Button.png" onDemand="false" />
       </Commands>
     </ArcMap>
   </AddIn>
