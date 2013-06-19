@@ -4,9 +4,9 @@
   <Description>Find duplicates in the feature class selected in the Table of Contents.</Description>
   <Version>1.1</Version>
   <Image>Images\FindDuplicatesAddIn.png</Image>
-  <Author>granth</Author>
-  <Company>QLDC</Company>
-  <Date>8/04/2011</Date>
+  <Author>Grant Herbert</Author>
+  <Company>Grant Herbert</Company>
+  <Date>8/04/2013</Date>
   <Targets>
     <Target name="Desktop" version="10.1" />
   </Targets>
